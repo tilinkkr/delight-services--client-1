@@ -84,7 +84,7 @@
                         </button>
                     </div>
                     <!-- Mobile Menu Button -->
-                    <button class="lg:hidden p-2 text-heritage-navy">
+                    <button id="mobile-menu-toggle" class="lg:hidden p-2 text-heritage-navy">
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                 </div>
@@ -413,6 +413,39 @@
         </div>
     </div>
 
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-drawer"
+        class="fixed inset-y-0 right-0 w-full sm:w-80 bg-white z-[60] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-gray-100">
+            <span class="font-display font-bold text-lg text-heritage-navy">Menu</span>
+            <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-heritage-navy transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+            <nav class="flex flex-col gap-4">
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="home.html">Home</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="index1.html">Services</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="products.html">Products</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="aboutus.html">About Us</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="contact.html">Contact</a>
+            </nav>
+            <div class="border-t border-gray-100 pt-6 flex flex-col gap-4">
+                <a class="text-center text-sm font-semibold text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="#">Log In</a>
+                <button onclick="window.location.href='started.html'"
+                    class="w-full bg-heritage-navy hover:bg-black text-white font-medium px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
