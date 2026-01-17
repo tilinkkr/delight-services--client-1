@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Delight Services - Modern Heritage Catalog</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Rozha+One&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "heritage-bg": "#FAF7F2", // Soft Amber-tinted Porcelain
+                        "heritage-navy": "#0F172A", // Deep Navy for Nav
+                        "heritage-gold": "#C5A059", // Muted Gold accents
+                        "heritage-amber": "#E6BE8A", // Soft Amber
+                        "heritage-text": "#2D241E", // Dark Brown/Grey for text
+                        "glass-border": "rgba(255, 255, 255, 0.6)",
+                    },
+                    fontFamily: {
+                        "serif": ["Rozha One", "serif"],
+                        "sans": ["Outfit", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-heritage-bg text-heritage-text selection:bg-heritage-gold selection:text-white">
+    <div class="fixed inset-0 pointer-events-none z-[100] opacity-[0.04] mix-blend-multiply"
+        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx2iukpTtEM93qF3IahE2nOwEvFyKzTmK0K_ul6d-YJbMKi1da8TGLCZvdNast0ZQk3SoWwhCKBsMUtX7IxzQXJHQYDKXOFkcUTjNkVzeJYl_LjWCUVQTU_89BDHf0J7Utu5tqs61vL20kTc9JHI3_X-R44W7c4kNVXqGi_9UCwk0GPIZhIguYzwMcLBdEFAv3yXm-14z7G9-AWSESgLEJ3y-wRCEOIzPjFnstAwFuMpQ4SZtd6OV0BRRMQ5OEx9klNIfOqAjcuLY');">
+    </div>
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <a href="home.html" class="flex items-center gap-3 cursor-pointer group">
+                        <img src="delight.png" alt="Logo"
+                            class="w-10 h-10 object-contain group-hover:scale-105 transition-transform">
+                        <span class="font-display font-bold text-xl tracking-tight text-heritage-navy">Delight
+                            Services</span>
+                    </a>
+                    <nav class="hidden lg:flex gap-10 items-center">
+                        <a class="text-sm font-medium text-gray-500 hover:text-heritage-gold transition-colors"
+                            href="home.html">Home</a>
+                        <a class="text-sm font-medium text-gray-500 hover:text-heritage-gold transition-colors"
+                            href="index1.html">Services</a>
+                        <a class="text-sm font-medium text-heritage-gold hover:text-heritage-gold transition-colors"
+                            href="products.html">Products</a>
+                        <a class="text-sm font-medium text-gray-500 hover:text-heritage-gold transition-colors"
+                            href="aboutus.html">About Us</a>
+                    </nav>
+                    <div class="hidden lg:flex items-center gap-4">
+                        <a class="text-sm font-semibold text-heritage-navy hover:text-heritage-gold transition-colors"
+                            href="#">Log In</a>
+                        <button onclick="window.location.href='started.html'"
+                            class="bg-heritage-navy hover:bg-black text-white font-medium px-6 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg text-sm">
+                            Get Started
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-toggle" class="lg:hidden p-2 text-heritage-navy">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1 px-4 md:px-10">
+                    <div class="flex flex-col items-center text-center gap-4 py-12 md:py-16 relative">
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-heritage-gold/10 rounded-full blur-3xl -z-10">
+                        </div>
+                        <span class="text-heritage-gold uppercase tracking-[0.2em] text-xs font-bold">The Scent &amp;
+                            Spirit Bazaar</span>
+                        <h1 class="text-heritage-navy text-5xl md:text-6xl font-serif leading-tight">
+                            Modern Heritage Collection
+                        </h1>
+                        <p class="text-heritage-text/70 text-lg font-light max-w-2xl leading-relaxed font-sans">
+                            Curated artifacts of sensory delight. Explore our premium range of artisanal perfumes,
+                            incense, and trusted financial products designed for a life of abundance.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-6 pb-10">
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-heritage-navy/10 pb-6">
+                            <div class="flex gap-3 flex-wrap justify-center md:justify-start">
+                                <button
+                                    class="flex h-10 items-center justify-center px-6 rounded-full bg-heritage-navy text-white shadow-md hover:shadow-lg transition-all">
+                                    <p class="text-sm font-medium tracking-wide">All Treasures</p>
+                                </button>
+                                <button
+                                    class="flex h-10 items-center justify-center px-6 rounded-full bg-white/50 border border-heritage-navy/10 hover:border-heritage-gold hover:text-heritage-gold text-heritage-navy transition-all duration-300">
+                                    <p class="text-sm font-medium tracking-wide">Attars &amp; Scents</p>
+                                </button>
+                                <button
+                                    class="flex h-10 items-center justify-center px-6 rounded-full bg-white/50 border border-heritage-navy/10 hover:border-heritage-gold hover:text-heritage-gold text-heritage-navy transition-all duration-300">
+                                    <p class="text-sm font-medium tracking-wide">Sacred Incense</p>
+                                </button>
+                                <button
+                                    class="flex h-10 items-center justify-center px-6 rounded-full bg-white/50 border border-heritage-navy/10 hover:border-heritage-gold hover:text-heritage-gold text-heritage-navy transition-all duration-300">
+                                    <p class="text-sm font-medium tracking-wide">Wealth Plans</p>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="text-xs uppercase tracking-widest text-heritage-text/60 font-semibold hidden sm:block">Sort</span>
+                                <button
+                                    class="flex items-center gap-2 text-sm font-serif text-heritage-navy hover:text-heritage-gold transition-colors">
+                                    Recommended
+                                    <span class="material-symbols-outlined text-lg">expand_more</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-16">
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/30 backdrop-blur-lg border border-glass-border shadow-[0_8px_30px_rgb(230,190,138,0.2)] hover:shadow-[0_15px_35px_rgb(230,190,138,0.4)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    data-alt="Luxury golden perfume bottle on dark background"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlxxTWJdc7Xu2yTThhpyzBw2GzS4tSzTCJWaIGXWlkYT90YeM7Mlt9X3PWnkmT5AawOgWKVGYDxAIvmfYnhtC-M-oIfoALL7ySuM17mMqKG3C-lZafgc_ldMcA3SqLwYrD2WZguMDy1PZiito7EpVJK62wEqX-ojMLgnJ3pnAfxAAzsbEG3P6MVucWtuyaYd3DFZ8wkXsoqEX1nGAnINnuGIc-HxIA_1Kw2nqxLOlVJ4UaVIL5IQ0WLwKKyO6sitd_q85utQFjqg4");'>
+                                </div>
+                                <div class="absolute top-3 right-3 opacity-30 text-white">
+                                    <span class="material-symbols-outlined text-3xl">filter_vintage</span>
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-bg/95 backdrop-blur-md text-heritage-navy font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">visibility</span> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-gold/5 pointer-events-none rotate-12">spa</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Nawabi Oud Essence</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-gold text-lg font-bold font-sans">₹2,499</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">50ml</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">
+                                    Exquisite long-lasting woody notes inspired by royal evenings.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/30 backdrop-blur-lg border border-glass-border shadow-[0_8px_30px_rgb(230,190,138,0.2)] hover:shadow-[0_15px_35px_rgb(230,190,138,0.4)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    data-alt="Bundle of sandalwood incense sticks with smoke"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSRx448dEHFMfxMchEK2Q0JiUETG3MaBfV7_v4bLlYErDJbcmwqXOJOHuu1ZGZJ0ZQTlOdluLhgF0j3Dilb9ZXVHHCSUgxROoyvyekHnUN6LFs1_ZaFhYDwIJh1ml9-TF4zTRgjY_0KFBMEBj7_ZGhVoOaxgmLogZQH6AxwIU8yvev_3SqrOBhOmHukMKF8k1OviDZ2sYITctzZGwOENIE9yo5NCNDBzX7ilGsMcLBe3MlIaR3-zK9XJOyvMeqv0VRxD_C6RfkqeM");'>
+                                </div>
+                                <div class="absolute top-3 right-3 opacity-30 text-white">
+                                    <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-bg/95 backdrop-blur-md text-heritage-navy font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">visibility</span> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-gold/5 pointer-events-none rotate-12">spa</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Mysore Sandalwood</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-gold text-lg font-bold font-sans">₹999</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">Pack of 40</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">100%
+                                    Organic ingredients, hand-rolled for purity and prayer.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/30 backdrop-blur-lg border border-glass-border shadow-[0_8px_30px_rgb(230,190,138,0.2)] hover:shadow-[0_15px_35px_rgb(230,190,138,0.4)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    data-alt="Purple lavender fields mist spray bottle"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwPnv5Jur1-LSPZSVHZx5hHo57FNb-SBGgdMvmGeWaG45nR-MsFshZVnTOaQqkdeR1VpQ5Rn1R5-a4iCumzo--vDse_IqrF2SD-KX9u9KZGulgqirZTN_IsXGDCdj-kGM1v-1G1BGchvr2YZ4qRkgr8K4Ufo1b95H2HsrYiCsingraXAejIxYhUhJnsKrbOlI6guHNLoXUxhYCfSuuhxBqH3tUrUWKzcfAc7om0vI5EOuzhSSlHC-gNJRwy6Uj4rIZnuIRt88rgYo");'>
+                                </div>
+                                <div class="absolute top-3 right-3 opacity-30 text-white">
+                                    <span class="material-symbols-outlined text-3xl">water_drop</span>
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-bg/95 backdrop-blur-md text-heritage-navy font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">visibility</span> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-gold/5 pointer-events-none rotate-12">spa</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Himalayan Lavender</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-gold text-lg font-bold font-sans">₹1,299</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">100ml</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">Calming
+                                    evening fragrance harvested from high altitudes.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/80 backdrop-blur-lg border-2 border-heritage-navy/5 shadow-[0_8px_30px_rgb(15,23,42,0.1)] hover:shadow-[0_15px_35px_rgb(15,23,42,0.15)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                    data-alt="Abstract financial growth chart with coins"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_rY5SV6j4l9ZGR1uXMHYuC5-9W6rwIJOt9ZEAc62AQ2B3w0pigEO_tSh1CNladtjN0zKursmzfMB9VRarGCAAUivg95HvdcDP1F7DMaoq_12DNUdoqXBKPaVYx2aU9nyCXWLeM9NoUL_d1wQgXUCyRd3GqhX9c7sctUdBbA_R0jpggH-Q8omY34cZIHIuCKPfzmME_Uf9XRjlJBtL20C0ZamI8DJ8Z0GvicSnQ8Rpm8dmsFceOnFbZmRwp4eXrusGDsAaio3mEFc");'>
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-heritage-navy/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest text-white">
+                                    Advisory
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-navy text-white font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-heritage-navy/90 transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">description</span> View Plan
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative bg-white">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-navy/5 pointer-events-none rotate-12">account_balance</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Lakshmi Wealth Plan</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-navy/80 text-lg font-bold font-sans">Custom</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">Insurance</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">
+                                    Comprehensive financial protection tailored for family legacy.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/30 backdrop-blur-lg border border-glass-border shadow-[0_8px_30px_rgb(230,190,138,0.2)] hover:shadow-[0_15px_35px_rgb(230,190,138,0.4)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    data-alt="Minimalist bottle of rose oil with petals"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_lwj2D9nrmLW69PpyXP0MrLQdJK61D-1C8SnfejHKZ3uB3WGiJ2j7Z1XmPsb-_PdviZAgboo4xg7VXqJnLhEBifb7alUpIFOPRpZst1x8MIQYDTRg7K7CjQs223OQF2NzUZW5hSpy6cJYmr_cKthhAfdAhGLTBXASPN1cgOlcKJeBkfxfb_ixFXHMFRSn_PRxyJJV7RGZOOULpmizRjsWyqJtwz238UxZjSSIzDLEMN6ygh3y3UbUH8msAJR1dzfCGJeaRxjeO48");'>
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-bg/95 backdrop-blur-md text-heritage-navy font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">visibility</span> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-gold/5 pointer-events-none rotate-12">spa</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Jaipur Rose Attar</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-gold text-lg font-bold font-sans">₹1,499</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">10ml</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">Pure
+                                    essential oil extract, distilled using ancient techniques.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/30 backdrop-blur-lg border border-glass-border shadow-[0_8px_30px_rgb(230,190,138,0.2)] hover:shadow-[0_15px_35px_rgb(230,190,138,0.4)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    data-alt="Earthy cedarwood chips and oil bottle"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCk2xwU9zdc0a1pwW5elwr6TQwEzCkHcTe6MmYTcr9g-b8SwU430YtnhY0ZtQmlRTLPQVNkt_egv-i-At2qGrs4ER27TUu7oULj5nYpbuMqVDCjLe-Gr1KKpsPMPpWEBk3F0L1QGDNaRoY9x6VvAwBl6b54uN1fkZCM6MI8poct8vZ9Wgq6m7EwR7l0th-oxTxOJSNMGUow0TzsBHvISiFe1q1Me7cbSgR-bk44EbEv2Frq9Hc4hlt7rGVWvjVuNCz0sqbW4Dp4AIA");'>
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-bg/95 backdrop-blur-md text-heritage-navy font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">visibility</span> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-gold/5 pointer-events-none rotate-12">spa</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Mountain Cedarwood</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-gold text-lg font-bold font-sans">₹1,199</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">50ml</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">Earthy
+                                    and grounding scent perfect for meditation spaces.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/80 backdrop-blur-lg border-2 border-heritage-navy/5 shadow-[0_8px_30px_rgb(15,23,42,0.1)] hover:shadow-[0_15px_35px_rgb(15,23,42,0.15)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                    data-alt="Professional handshake in a modern office"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXFXREUk8VvtTWGhz_DtvWBhD2MaiMCXgbyTJV1IEAnIEGtuwN6OPA-9EBPpwjRBfZfH2uWWAFiy51E4xfxCfua0qkK7DHPUjZdfZp3vWeJgZwnleJacbUoc1pPy2xgPMQcPa3PXiukhFgEaqKPY4ygLA9biVddlA-X62CzEoSDlQgRK06RAGKz3SUOYw3v4NinN6FM0RNx3zDCo05pG1qypRSKg4_9FuiCs3dbdwUXm47UqyKU7vgQTlJbTP72h4vnF0e9S4YG7Q");'>
+                                </div>
+                                <div
+                                    class="absolute top-3 right-3 bg-heritage-navy/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest text-white">
+                                    Advisory
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-navy text-white font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-heritage-navy/90 transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">description</span> View Plan
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative bg-white">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-navy/5 pointer-events-none rotate-12">school</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Saraswati Education</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-navy/80 text-lg font-bold font-sans">Custom</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">Planning</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">Secure
+                                    your children's educational journey with wisdom.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative flex flex-col rounded-2xl bg-white/30 backdrop-blur-lg border border-glass-border shadow-[0_8px_30px_rgb(230,190,138,0.2)] hover:shadow-[0_15px_35px_rgb(230,190,138,0.4)] transition-all duration-500 overflow-hidden">
+                            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#F0EBE5]">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                    data-alt="Elegant jasmine flowers on white table"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3c6G4csyZFquIfFKj8bbhrB8LNvssl8dZFwE6PDzioL568ONVS-xlgn_5NQGf0Pu7d6qQMReDgzlcleS3wzxOLpVsLGBX1GLqhiuADKXX1VwbcyIdVpeiF_RQ6wk4SRUGdXmoVkQlyPAAsb4EBXK_k7-Whij0N4Jr9O9CCjkHEMANRZQSx46pRG9eMdhcKXFRr61XU4aI8rEkWfF99P15j41hmpX6BMhB58xMBBVedKYQnaRSUMftH0la5KrrGF06DB55g2BuB_I");'>
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 bg-gradient-to-t from-black/60 to-transparent pt-12">
+                                    <button
+                                        class="w-full py-3 bg-heritage-bg/95 backdrop-blur-md text-heritage-navy font-serif tracking-wider uppercase text-xs font-bold rounded-lg shadow-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                        <span class="material-symbols-outlined text-base">visibility</span> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 p-5 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -right-4 -bottom-4 text-[100px] text-heritage-gold/5 pointer-events-none rotate-12">spa</span>
+                                <h3 class="text-heritage-navy text-xl font-serif leading-tight">Madurai Jasmine</h3>
+                                <div class="flex justify-between items-baseline mt-1 mb-2">
+                                    <p class="text-heritage-gold text-lg font-bold font-sans">₹1,899</p>
+                                    <span class="text-xs text-heritage-text/40 font-medium">50ml</span>
+                                </div>
+                                <p class="text-heritage-text/70 text-sm font-light leading-relaxed line-clamp-2">Fresh
+                                    morning bloom scent with sweet southern undertones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center pb-20">
+                        <button
+                            class="group flex items-center gap-3 rounded-full border border-heritage-gold/30 bg-white/50 px-8 py-3 text-sm font-bold text-heritage-navy hover:bg-heritage-gold hover:text-white hover:border-heritage-gold transition-all duration-300">
+                            <span class="tracking-widest uppercase text-xs">Explore More</span>
+                            <span
+                                class="material-symbols-outlined text-sm transition-transform group-hover:translate-y-0.5">arrow_downward</span>
+                        </button>
+                    </div>
+                    <footer
+                        class="flex flex-col gap-8 border-t border-heritage-navy/10 py-12 text-center bg-heritage-bg relative">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-heritage-bg px-4">
+                            <div
+                                class="size-8 flex items-center justify-center rounded-full border border-heritage-gold text-heritage-gold bg-white">
+                                <span class="material-symbols-outlined text-sm">diamond</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+                            <a class="text-heritage-text/60 hover:text-heritage-gold transition-colors text-sm font-medium"
+                                href="#">Heritage Policy</a>
+                            <a class="text-heritage-text/60 hover:text-heritage-gold transition-colors text-sm font-medium"
+                                href="#">Terms of Use</a>
+                            <a class="text-heritage-text/60 hover:text-heritage-gold transition-colors text-sm font-medium"
+                                href="#">Customer Care</a>
+                            <a class="text-heritage-text/60 hover:text-heritage-gold transition-colors text-sm font-medium"
+                                href="#">Contact</a>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 text-heritage-text/40">
+                            <p class="text-xs font-serif tracking-widest">EST. 2023 • INDIA</p>
+                            <div class="flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-sm">copyright</span>
+                                <p class="text-xs font-normal">Delight Services. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-drawer"
+        class="fixed inset-y-0 right-0 w-full sm:w-80 bg-white z-[60] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-gray-100">
+            <span class="font-display font-bold text-lg text-heritage-navy">Menu</span>
+            <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-heritage-navy transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+            <nav class="flex flex-col gap-4">
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="home.html">Home</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="index1.html">Services</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="products.html">Products</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="aboutus.html">About Us</a>
+                <a class="text-lg font-medium text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="contact.html">Contact</a>
+            </nav>
+            <div class="border-t border-gray-100 pt-6 flex flex-col gap-4">
+                <a class="text-center text-sm font-semibold text-heritage-navy hover:text-heritage-gold transition-colors"
+                    href="#">Log In</a>
+                <button onclick="window.location.href='started.html'"
+                    class="w-full bg-heritage-navy hover:bg-black text-white font-medium px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
